@@ -1,0 +1,44 @@
+.header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 12px 72px;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    gap: 80px;
+    margin-top: 24px;
+}
+
+.contacts {
+    position: relative;
+    margin-top: 24px;
+}
+
+.number {
+    position: relative;
+    font-size: 20px;
+}
+
+.number::before {
+    position: absolute;
+    left: -24px;
+    content: url("/icon/phone.svg");
+}
+
+.button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #FFFFFF66;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 12px;
+}

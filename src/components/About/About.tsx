@@ -1,0 +1,55 @@
+'use client';
+
+import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Pagination } from "swiper/modules";
+
+import styles from "./About.module.css";
+
+import 'swiper/css';
+
+const About = () => {
+
+    const pagination = {
+        clickable: true,
+        el: '.swiper-pagination',
+        renderBullet: (index: number, className: string) => {
+            return `<span class="${styles.paginationBullet} ${className} ${index === 0 ? styles.active : ''}"></span>`;
+        },
+    };
+
+    return (
+        <section className={styles.about}>
+            <div className={styles.pagination +" swiper-pagination"} />
+            <Swiper
+                direction={'vertical'}
+                pagination={pagination}
+                loop
+                onActiveIndexChange={(swiper) => {
+                    const bullets = document.querySelectorAll(`.${styles.paginationBullet}`);
+                    if (!bullets.length) return;
+
+                    bullets.forEach(bullet => bullet.classList.remove(styles.active));
+                    const active = bullets[swiper.realIndex];
+                    if (active) active.classList.add(styles.active);
+                }}
+
+                style={{ position: 'absolute', width: '100%', height: '100%'  }}
+                modules={[Pagination]}
+            >
+                {['/swiper/about/1.jpg', '/swiper/about/2.jpg', '/swiper/about/1.jpg'].map((src, index) => (
+                    <SwiperSlide key={index}><Image className={styles.image} src={src} alt="about" width={1440} height={918} /></SwiperSlide>
+                ))}
+            </Swiper>
+            <div className={styles.content}>
+                <h1 className={styles.title}>Экскурсии на <br/> квадроциклах<br/> в Геленджике</h1>
+                <p>приезжайте за новыми ощущениями и эмоциями!</p>
+                <button className={styles.button}>Подобрать маршрут<Image src="/icon/next.svg" alt="arrow" width={24} height={24} /></button>
+            </div>
+        </section>
+    );
+}
+
+export default About;
+

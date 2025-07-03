@@ -1,0 +1,25 @@
+.advantage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 48px 72px 24px;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.circle {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 8px;
+    top: 0px;
+    background-color: #037E8C;
+    border-radius: 50%;
+    z-index: -1;
+}

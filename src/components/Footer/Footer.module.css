@@ -1,0 +1,32 @@
+.footer {
+    padding: 0 72px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #121214;
+    border-bottom: 1px solid #121214;
+    padding: 4px 0;
+}
+
+.logo {
+    margin-left: 100px;
+}
+
+.menu {
+    display: flex;
+    gap: 80px;
+}
+
+.link:hover {
+    color: #037E8C;
+    transition: color 0.3s;
+}
+
+.copyright {
+    text-align: center;
+    padding: 24px 0;
+    color: #787878;
+}
