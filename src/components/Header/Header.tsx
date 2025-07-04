@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Image src="/logo.png" alt="logo" width={111} height={143} />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`} alt="logo" width={111} height={143} />
             <nav className={styles.menu}> 
                 <Link href="#">МАРШРУТЫ</Link>
                 <Link href="#">ГАЛЕРЕЯ</Link>

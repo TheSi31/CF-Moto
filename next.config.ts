@@ -9,5 +9,8 @@ const nextConfig: NextConfig = {
   },
 };
 
+console.log('BASE PATH:', process.env.NEXT_PUBLIC_BASE_PATH);
+
+
 export default nextConfig;
 
