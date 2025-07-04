@@ -38,7 +38,11 @@ const About = () => {
                 style={{ position: 'absolute', width: '100%', height: '100%'  }}
                 modules={[Pagination]}
             >
-                {['/swiper/about/1.jpg', '/swiper/about/2.jpg', '/swiper/about/1.jpg'].map((src, index) => (
+                {[
+                    `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/about/1.jpg`,
+                    `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/about/2.jpg`,
+                    `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/about/1.jpg`
+                ].map((src, index) => (
                     <SwiperSlide key={index}><Image className={styles.image} src={src} alt="about" width={1440} height={918} /></SwiperSlide>
                 ))}
             </Swiper>

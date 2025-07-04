@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <Image className={styles.logo} src="/logo.png" alt="logo" width={65} height={83} />
+                <Image className={styles.logo} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Logo.png`} alt="logo" width={65} height={83} />
                 <nav className={styles.menu}>
                     <Link className={styles.link} href="#">МАШРУТЫ</Link>
                     <Link className={styles.link} href="#">ГАЛЕРЕЯ</Link>
