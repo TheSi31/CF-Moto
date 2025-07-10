@@ -13,7 +13,7 @@ const About = () => {
 
     const pagination = {
         clickable: true,
-        el: '.swiper-pagination',
+        el: '.about-swiper-pagination',
         renderBullet: (index: number, className: string) => {
             return `<span class="${styles.paginationBullet} ${className} ${index === 0 ? styles.active : ''}"></span>`;
         },
@@ -21,7 +21,7 @@ const About = () => {
 
     return (
         <section className={styles.about}>
-            <div className={styles.pagination +" swiper-pagination"} />
+            <div className={styles.pagination +" about-swiper-pagination"} />
             <Swiper
                 direction={'vertical'}
                 pagination={pagination}
@@ -34,7 +34,6 @@ const About = () => {
                     const active = bullets[swiper.realIndex];
                     if (active) active.classList.add(styles.active);
                 }}
-
                 style={{ position: 'absolute', width: '100%', height: '100%'  }}
                 modules={[Pagination]}
             >
@@ -56,4 +55,5 @@ const About = () => {
 }
 
 export default About;
+
 

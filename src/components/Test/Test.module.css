@@ -1,0 +1,27 @@
+.test {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin: 120px 0px 60px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color:white;
+}
+
+.content h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    font-weight: 500;
+}

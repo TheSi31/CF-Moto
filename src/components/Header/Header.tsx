@@ -8,8 +8,8 @@ const Header = () => {
         <header className={styles.header}>
             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Logo.png`} alt="logo" width={111} height={143} unoptimized />
             <nav className={styles.menu}> 
-                <Link href="#">МАРШРУТЫ</Link>
-                <Link href="#">ГАЛЕРЕЯ</Link>
+                <Link href="#routes">МАРШРУТЫ</Link>
+                <Link href="#photo">ГАЛЕРЕЯ</Link>
                 <Link href="#">ВОПРОС-ОТВЕТ</Link>
                 <Link href="#">КОНТАКТЫ</Link>
             </nav>

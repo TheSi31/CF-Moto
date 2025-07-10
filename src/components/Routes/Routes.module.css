@@ -1,0 +1,12 @@
+.title {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.routes {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+}
