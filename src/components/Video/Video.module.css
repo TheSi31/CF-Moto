@@ -1,0 +1,46 @@
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: brightness(0.3) grayscale(100%);
+    -webkit-backdrop-filter: brightness(0.3) grayscale(100%);
+}
+
+.video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  filter: brightness(0.3) grayscale(100%);
+  z-index: 0;
+}
+
+.video__player {
+    width: 50vw;
+    height: 50vh;
+    border: 7px solid #ffffff;
+    background-color: black;
+    border-radius: 24px;
+    z-index: 1;
+}
+
+.play__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.play__button:hover {
+  opacity: 0.8;
+}

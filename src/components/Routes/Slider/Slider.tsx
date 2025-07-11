@@ -12,10 +12,9 @@ const Slider = () => {
 
     return (
         <Swiper
-            slidesPerView={1.2}
-            loop
+            slidesPerView="auto"
             spaceBetween={20}
-            centeredSlides={false}
+            slidesOffsetAfter={50}
             pagination={
                 {
                         clickable: true,
@@ -37,13 +36,13 @@ const Slider = () => {
             }}
         >
             <SwiperSlide className={styles.route__slider__item}>
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" fill />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" width={350} height={350} />
             </SwiperSlide>
             <SwiperSlide className={styles.route__slider__item}>
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" fill />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" width={350} height={350}  />
             </SwiperSlide>
             <SwiperSlide className={styles.route__slider__item}>
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" fill  />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/base/1.png`} alt="route" width={350} height={350}  />
             </SwiperSlide>
             <div className={`${styles.route__slider__pagination} ${paginationClass}`} />
         </Swiper>

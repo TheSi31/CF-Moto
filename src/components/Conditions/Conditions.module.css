@@ -1,0 +1,33 @@
+.conditions {
+    padding: 64px 72px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.conditions__content {
+    display: grid;
+    grid-template-columns: 413px 413px 413px;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.conditions__content__item {
+    display: flex;
+    width: 413px;
+    height: 112px;
+    border: 1px solid #037E8C;
+    padding: 9px;
+    border-radius: 10px;
+    gap: 18px;
+}
+
+.conditions__content__item p {
+    line-height: 150%;
+}

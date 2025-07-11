@@ -22,6 +22,9 @@ const Photo = () => {
             <h2 className={styles.title}>Фото</h2>
             <Swiper
                 slidesPerView={3}
+                centeredSlides={true}   
+                slidesOffsetBefore={50}
+                slidesOffsetAfter={50}
                 loop
                 pagination={pagination}
                 modules={[Pagination]}
@@ -39,6 +42,8 @@ const Photo = () => {
                     `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/photo/1.png`,
                     `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/photo/2.png`,
                     `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/photo/3.png`,
+                    `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/photo/1.png`,
+                    `${process.env.NEXT_PUBLIC_BASE_PATH}/swiper/photo/2.png`,
                 ].map((src, index) => (
                     <SwiperSlide key={index}><Image className={styles.image} src={src} alt="photo" width={413} height={413} /></SwiperSlide>
                 ))}

@@ -3,6 +3,11 @@ import Advantage from "@/components/Advantage/Advantage";
 import Routes from "@/components/Routes/Routes";
 import Test from "@/components/Test/Test";
 import Photo from "@/components/Photo/Photo";
+import Video from "@/components/Video/Video";
+import Team from "@/components/Team/Team";
+import Conditions from "@/components/Conditions/Conditions";
+import Special from "@/components/Special/Special";
+import Present from "@/components/Present/Present";
 
 export default function Home() {
   return (
@@ -12,6 +17,11 @@ export default function Home() {
       <Routes />
       <Test />
       <Photo />
+      <Video />
+      <Team />
+      <Conditions />
+      <Special />
+      <Present />
     </main>
   );
 }
