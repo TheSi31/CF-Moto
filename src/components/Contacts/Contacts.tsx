@@ -1,7 +1,14 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./Contacts.module.css";
 
-import Map from "../Map/Map";
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('@/components/Map/Map'), {
+  ssr: false,
+  loading: () => <p>Загружаем карту…</p>,
+});
 
 const Contacts = () => {
     return (

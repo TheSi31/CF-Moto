@@ -12,6 +12,10 @@
     margin-bottom: 64px;
 }
 
+.contacts__content {
+    width: 100%;
+}
+
 .contacts__content__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
