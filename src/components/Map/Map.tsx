@@ -4,8 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-// Фикс для отображения иконок
-delete L.Icon.Default.prototype._getIconUrl;
+// Исправь баг, чтобы иконки отображались корректно
+(L.Icon.Default.prototype as any)._getIconUrl = undefined;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: '/leaflet/marker-icon-2x.png',
   iconUrl: '/leaflet/marker-icon.png',
