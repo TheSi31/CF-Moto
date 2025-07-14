@@ -1,0 +1,48 @@
+.contacts {
+    padding: 96px 72px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.contacts__content__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.contacts__content__info__item{
+    position: relative;
+    display: flex;
+    gap: 16px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #037E8C;
+    border-radius: 50%;
+}
+
+.contacts__content__info__item p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.contacts__social__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.contacts__social__nav {
+    display: flex;
+    gap: 16px;
+}

@@ -8,6 +8,9 @@ import Team from "@/components/Team/Team";
 import Conditions from "@/components/Conditions/Conditions";
 import Special from "@/components/Special/Special";
 import Present from "@/components/Present/Present";
+import Question_answer from "@/components/Question-answer/Question_answer";
+import Services from "@/components/Services/Services";
+import Contacts from "@/components/Contacts/Contacts";
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <Conditions />
       <Special />
       <Present />
+      <Question_answer />
+      <Services />
+      <Contacts />
     </main>
   );
 }
