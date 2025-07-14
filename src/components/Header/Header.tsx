@@ -10,8 +10,8 @@ const Header = () => {
             <nav className={styles.menu}> 
                 <Link href="#routes">МАРШРУТЫ</Link>
                 <Link href="#photo">ГАЛЕРЕЯ</Link>
-                <Link href="#">ВОПРОС-ОТВЕТ</Link>
-                <Link href="#">КОНТАКТЫ</Link>
+                <Link href="#question_answer">ВОПРОС-ОТВЕТ</Link>
+                <Link href="#contacts">КОНТАКТЫ</Link>
             </nav>
             <div className={styles.contacts}>
                 <p className={styles.number}>+7 928 333 26 45</p>

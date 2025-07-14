@@ -5,7 +5,7 @@ import styles from "./Present.module.css";
 
 const Present = () => {
     return (
-        <section className={styles.present}>
+        <section className={styles.present} style={{backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_PATH}/present_background.png")`}}>
             <h2 className={styles.title}>Подарочный сертификат</h2>
             <h3 className={styles.subtitle}>Хотите сделать оригинальный подарок?<br /> Подарите незабываемые эмоции - лучший подарок!</h3>
             <div className={styles.present__content}>

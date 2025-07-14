@@ -17,6 +17,11 @@
     min-width: 550px;
 }
 
+.route__title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
 .route__list {
     list-style: none;
 }

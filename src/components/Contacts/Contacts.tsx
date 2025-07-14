@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./Contacts.module.css";
 
+import Map from "../Map/Map";
+
 const Contacts = () => {
     return (
-        <section className={styles.contacts}>
+        <section className={styles.contacts} id="contacts">
             <div className={styles.contacts__content}>
                 <h2 className={styles.title}>Контакты</h2>
                 <div className={styles.contacts__content__info}>
@@ -44,7 +46,7 @@ const Contacts = () => {
                     </nav>
                 </div>
             </div>
-            <div></div>
+            <Map />
         </section>
     );
 }

@@ -5,7 +5,7 @@ import styles from "./Question_answer.module.css";
 
 const Question_answer = () => {
     return (
-        <section className={styles.question_answer}>
+        <section className={styles.question_answer} id="question_answer">
             <h2 className={styles.title}>Вопросы-ответы</h2>
             <div className={styles.question_answer__content}>
                 <div className={styles.accordions}>

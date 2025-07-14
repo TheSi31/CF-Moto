@@ -1,16 +1,22 @@
 .contacts {
+    display: flex;
+    gap: 30px;
     padding: 96px 72px;
 }
 
 .title {
+    border-top: 1px solid #037E8C;
     font-size: 36px;
     font-weight: 700;
+    padding-top: 16px;
+    margin-bottom: 64px;
 }
 
 .contacts__content__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
 }
 
 .contacts__content__info__item{

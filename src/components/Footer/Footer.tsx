@@ -11,10 +11,10 @@ const Footer = () => {
                 <nav className={styles.menu}>
                     <Link className={styles.link} href="#routes">МАШРУТЫ</Link>
                     <Link className={styles.link} href="#photo">ГАЛЕРЕЯ</Link>
-                    <Link className={styles.link} href="#">ВОПРОС-ОТВЕТ</Link>
-                    <Link className={styles.link} href="#">КОНТАКТЫ</Link>
-                    <Link className={styles.link} href="#">УСЛОВИЯ</Link>
-                    <Link className={styles.link} href="#">СПЕЦПРЕДЛОЖЕНИЯ</Link>
+                    <Link className={styles.link} href="#question_answer">ВОПРОС-ОТВЕТ</Link>
+                    <Link className={styles.link} href="#contacts">КОНТАКТЫ</Link>
+                    <Link className={styles.link} href="#conditions">УСЛОВИЯ</Link>
+                    <Link className={styles.link} href="#special">СПЕЦПРЕДЛОЖЕНИЯ</Link>
                 </nav>
             </div>
             <p className={styles.copyright}>© CFMOTO Experience Kuban. Внедорожный полигон CFMOTO и прокат квадроциклов в Геленджике</p>

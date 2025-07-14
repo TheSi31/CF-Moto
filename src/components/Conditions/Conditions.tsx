@@ -4,7 +4,7 @@ import styles from "./Conditions.module.css";
 
 const Conditions = () => {
     return (
-        <section className={styles.conditions}>
+        <section className={styles.conditions} style={{backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_PATH}/conditions_background.png")`}} id='conditions'>
             <h2 className={styles.title}>Условия предоставления<br/> услуг</h2>
             <div className={styles.conditions__content}>
                 <div className={styles.conditions__content__item}>
