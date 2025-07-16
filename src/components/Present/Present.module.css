@@ -36,6 +36,6 @@
 }
 
 .button {
-    width: fit-content;
-    padding: 14px 22px;
+    width: fit-content !important;
+    padding: 14px 22px !important;
 }

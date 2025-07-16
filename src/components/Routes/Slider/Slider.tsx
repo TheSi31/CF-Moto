@@ -20,7 +20,7 @@ const Slider = () => {
                         clickable: true,
                         el: `.${paginationClass}`,
                         renderBullet: (index: number, className: string) => {
-                            return `<span class="${styles.paginationBullet} ${className} ${index === 0 ? styles.active : ''}">${index + 1}</span>`;
+                            return `<span class="${styles.paginationBullet} ${className} ${index === 0 ? styles.active : ''}"></span>`;
                         },
                 }
             }

@@ -7,10 +7,10 @@ type ButtonProps = {
     outline?: boolean;
 }
 
-const Button = ({ text, className, outline }: ButtonProps) => {
+const Button = ({ text, className, outline, onClick }: ButtonProps) => {
 
     return (
-        <button className={(outline ? styles.outline : '') + ' ' + styles.button + ' ' + className} >{text}</button>
+        <button className={(outline ? styles.outline : '') + ' ' + styles.button + ' ' + className} onClick={onClick}>{text}</button>
     );
 }
 

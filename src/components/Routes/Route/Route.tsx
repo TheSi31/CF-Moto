@@ -1,54 +1,109 @@
 'use client';
 
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 
 import styles from "./Route.module.css";
 import Slider from "../Slider/Slider";
 import Button from "@/components/UI/Button/Button";
+import Modal from "@/components/UI/Modal/Modal";
 
-const Route = () => {
+type RouteProps = {
+    title: string;
+    price: number;
+    time: string;
+    distance: string;
+    level: string;
+    route: string;
+    images?: string[];
+    text?: string;
+}
+
+const Route = ( {title, price, time, distance, level, route, images, text}: RouteProps) => {
+
+    const [active, setActive] = useState(false);
 
     return (
         <div className={styles.route}>
             <span className={styles.line} />
             <div className={styles.route__content}>
                 <div>
-                    <h3 className={styles.route__title}>БАЗОВЫЙ</h3>
-                    <h4 className={styles.route__price}>от 4000 ₽</h4>
+                    <h3 className={styles.route__title}>{title}</h3>
+                    <h4 className={styles.route__price}>от {price} ₽</h4>
                 </div>
                 <ul className={styles.route__list}>
                     <li className={styles.route__list__item}>
                         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/time.svg`} alt="time" width={13} height={13} />
                         <div>
-                            <span className={styles.route__time}>Время в пути: </span>
-                            <b>1,5 - 2 часа</b>
+                            <span>Время в пути: </span>
+                            <b>{time}</b>
                         </div>      
                     </li>
                     <li className={styles.route__list__item}>
                         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/map.svg`} alt="map" width={13} height={13} />
                         <div>
-                            <span className={styles.route__time}>Расстояние: </span>
-                            <b>20 - 25 км</b>
+                            <span>Расстояние: </span>
+                            <b>{distance}</b>
                         </div>
                     </li>
                     <li className={styles.route__list__item}>
                         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/star.svg`} alt="level" width={13} height={13} />
                         <div>
-                            <span className={styles.route__time}>Сложность: </span>
-                            <b>5***</b>
+                            <span>Сложность: </span>
+                            <b>{level}</b>
                         </div>
                     </li>
                 </ul>
                 <div className={styles.route__description}>
                     <h4>Маршрут</h4>
-                    <p>Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис -<br /> -Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) - <br /> -Форсаж</p>
+                    <p>{route}</p>
                 </div>
                 <nav className={styles.route__buttons}>
-                    <Button text="Подробнее" outline />
+                    <Button text="Подробнее" outline onClick={() => setActive(true)} />
                     <Button text="Забронировать" />
                 </nav>
             </div> 
             <Slider /> {/*Нужно будет переделать*/}
+            <Modal active={active} setActive={setActive}>
+                <div className={styles.route}>
+                    <span className={styles.line} />
+                    <div className={styles.route__content}>
+                        <div>
+                            <h3 className={styles.route__title}>{title}</h3>
+                            <h4 className={styles.route__price}>от {price} ₽</h4>
+                        </div>
+                        <ul className={styles.route__list}>
+                            <li className={styles.route__list__item}>
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/time.svg`} alt="time" width={13} height={13} />
+                                <div>
+                                    <span>Время в пути: </span>
+                                    <b>{time}</b>
+                                </div>      
+                            </li>
+                            <li className={styles.route__list__item}>
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/map.svg`} alt="map" width={13} height={13} />
+                                <div>
+                                    <span>Расстояние: </span>
+                                    <b>{distance}</b>
+                                </div>
+                            </li>
+                            <li className={styles.route__list__item}>
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/route/star.svg`} alt="level" width={13} height={13} />
+                                <div>
+                                    <span>Сложность: </span>
+                                    <b>{level}</b>
+                                </div>
+                            </li>
+                        </ul>
+                        <div className={styles.route__description}>
+                            <h4>Маршрут</h4>
+                            <p>{route}</p>
+                        </div>
+                    </div>
+                    <Slider /> 
+                </div>
+            </Modal>    
         </div>
     );
 }

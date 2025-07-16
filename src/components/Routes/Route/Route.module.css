@@ -5,6 +5,7 @@
 }
 
 .line {
+    margin-top: 18px;
     min-width: 84px;
     height: 4px;
     background-color: #037E8C;
@@ -13,13 +14,20 @@
 .route__content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    min-width: 550px;
+    justify-content: space-between;
+    min-width: 545px;
+    max-width: 545px;
 }
 
 .route__title {
     font-size: 36px;
     font-weight: 600;
+    text-transform: uppercase;
+}
+
+.route__price {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .route__list {
