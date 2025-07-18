@@ -4,6 +4,12 @@
     padding: 12px 0px 0px 72px;
 }
 
+.route__modal{
+    display: flex;
+    gap: 20px;
+    padding: 0px;
+}
+
 .line {
     margin-top: 18px;
     min-width: 84px;

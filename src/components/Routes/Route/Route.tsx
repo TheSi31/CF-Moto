@@ -23,6 +23,13 @@ type RouteProps = {
 const Route = ( {title, price, time, distance, level, route, images, text}: RouteProps) => {
 
     const [active, setActive] = useState(false);
+    const imagesArray = [
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/1.png`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/2.png`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/3.png`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/4.png`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/5.png`
+    ]
 
     return (
         <div className={styles.route}>
@@ -66,7 +73,7 @@ const Route = ( {title, price, time, distance, level, route, images, text}: Rout
             </div> 
             <Slider /> {/*Нужно будет переделать*/}
             <Modal active={active} setActive={setActive}>
-                <div className={styles.route}>
+                <div className={styles.route__modal}>
                     <span className={styles.line} />
                     <div className={styles.route__content}>
                         <div>
@@ -102,6 +109,20 @@ const Route = ( {title, price, time, distance, level, route, images, text}: Rout
                         </div>
                     </div>
                     <Slider /> 
+                </div>
+                <div>
+                    <h4>Что просмотрим на маршруте</h4>
+                    <p>{text}</p>
+                </div>
+                <div>
+                    <h4>Стоимость за 1 квадрацикл:</h4>
+                    <div>
+                        {imagesArray.map((image, index) => (
+                            <div>
+                                <Image key={index} src={image} alt="route" width={300} height={300} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </Modal>    
         </div>

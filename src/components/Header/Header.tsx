@@ -1,9 +1,17 @@
+'use client';
+
+import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./Header.module.css";
+import ModalBid from "../Modal/ModalBid/ModalBid";
 
 const Header = () => {
+
+    const [active, setActive] = useState(false);
+
     return (
         <header className={styles.header}>
             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Logo.png`} alt="logo" width={111} height={143} unoptimized />
@@ -15,8 +23,9 @@ const Header = () => {
             </nav>
             <div className={styles.contacts}>
                 <p className={styles.number}>+7 928 333 26 45</p>
-                <button className={styles.button}>Перезвоните мне</button>
+                <button className={styles.button} onClick={() => setActive(true)}>Перезвоните мне</button>
             </div>
+            <ModalBid active={active} setActive={setActive} />
         </header>
     );
 }

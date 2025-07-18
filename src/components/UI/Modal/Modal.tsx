@@ -1,6 +1,4 @@
-'use client'
-
-import { useEffect, useRef } from 'react';
+import { useScrollLock } from '@/hooks/useScrollLock';
 
 import styles from './Modal.module.css';
 
@@ -12,31 +10,15 @@ type ModalProps = {
 
 const Modal = ({active, setActive, children}: ModalProps) => {
 
-    const scrollYRef = useRef(0);
-
-    useEffect(() => {
-        if (active) {
-            scrollYRef.current = window.scrollY;
-
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollYRef.current}px`;
-        } else {
-            window.scroll({ top: scrollYRef.current, behavior: 'instant' });
-
-            document.body.style.position = '';
-            document.body.style.top = '';
-        }
-
-        return () => {
-            document.body.style.position = '';
-            document.body.style.top = '';
-        };
-    }, [active]);
+    useScrollLock(active);
 
     return (
         <div className={active ? styles.modal + ' ' + styles.active : styles.modal} onClick={() => setActive(false)}>
-            <div className={active ? styles.content + ' ' + styles.active : styles.content} onClick={(e) => e.stopPropagation()}>
-                {children}
+            <div className={styles.modal__content}>
+                <span className={styles.close} onClick={() => setActive(false)}></span>
+                <div className={active ? styles.content + ' ' + styles.active : styles.content} onClick={(e) => e.stopPropagation()}>
+                    {children}
+                </div>
             </div>
         </div>
     );
