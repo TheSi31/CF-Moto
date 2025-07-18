@@ -48,7 +48,11 @@ const Photo = () => {
                     <SwiperSlide key={index}><Image className={styles.image} src={src} alt="photo" width={413} height={413} /></SwiperSlide>
                 ))}
             </Swiper>
-            <div className={styles.pagination +" photo-swiper-pagination"} />
+            <div className={styles.pagination__photo}>
+                <div className={styles.pagination +" photo-swiper-pagination"} />
+                <span className={styles.line} />
+                <p className={styles.scroll}>scroll</p>
+            </div>
         </section>
     );
 }

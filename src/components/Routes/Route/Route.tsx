@@ -18,9 +18,10 @@ type RouteProps = {
     route: string;
     images?: string[];
     text?: string;
+    rtl?: boolean
 }
 
-const Route = ( {title, price, time, distance, level, route, images, text}: RouteProps) => {
+const Route = ( {title, price, time, distance, level, route, images, text, rtl}: RouteProps) => {
 
     const [active, setActive] = useState(false);
     const imagesArray = [
@@ -32,9 +33,9 @@ const Route = ( {title, price, time, distance, level, route, images, text}: Rout
     ]
 
     return (
-        <div className={styles.route}>
-            <span className={styles.line} />
-            <div className={styles.route__content}>
+        <div className={rtl ? styles.route__rtl : styles.route} >
+            <span className={rtl ? styles.line + ' ' + styles.rtl : styles.line} />
+            <div className={rtl ? styles.route__content + ' ' + styles.rtl : styles.route__content}>
                 <div>
                     <h3 className={styles.route__title}>{title}</h3>
                     <h4 className={styles.route__price}>от {price} ₽</h4>
@@ -71,7 +72,7 @@ const Route = ( {title, price, time, distance, level, route, images, text}: Rout
                     <Button text="Забронировать" />
                 </nav>
             </div> 
-            <Slider /> {/*Нужно будет переделать*/}
+            <Slider rtl={rtl} />
             <Modal active={active} setActive={setActive}>
                 <div className={styles.route__modal}>
                     <span className={styles.line} />
