@@ -48,7 +48,7 @@ const About = () => {
             <div className={styles.content}>
                 <h1 className={styles.title}>Экскурсии на <br/> квадроциклах<br/> в Геленджике</h1>
                 <p>приезжайте за новыми ощущениями и эмоциями!</p>
-                <button className={styles.button}>Подобрать маршрут<Image src="/icon/next.svg" alt="arrow" width={24} height={24} /></button>
+                <button className={styles.button}>Подобрать маршрут<Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/icon/next.svg`} alt="arrow" width={24} height={24} /></button>
             </div>
         </section>
     );

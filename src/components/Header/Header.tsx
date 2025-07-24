@@ -22,7 +22,7 @@ const Header = () => {
                 <Link href="#contacts">КОНТАКТЫ</Link>
             </nav>
             <div className={styles.contacts}>
-                <p className={styles.number}>+7 928 333 26 45</p>
+                <p className={styles.number}><span style={{position: 'absolute', left: '-24px', top: '2px', content: `url(${process.env.NEXT_PUBLIC_BASE_PATH}/icon/phone.svg)`}}></span>+7 928 333 26 45</p>
                 <button className={styles.button} onClick={() => setActive(true)}>Перезвоните мне</button>
             </div>
             <ModalBid active={active} setActive={setActive} />

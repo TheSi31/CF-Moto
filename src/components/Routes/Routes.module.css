@@ -10,3 +10,12 @@
     flex-direction: column;
     gap: 128px;
 }
+
+.routes > :nth-child(1),
+.routes > :nth-child(5) {
+    padding: 12px 0px 0px 72px;
+}
+
+.routes > :nth-child(3) {
+    padding: 12px 72px 0px 0px;
+}

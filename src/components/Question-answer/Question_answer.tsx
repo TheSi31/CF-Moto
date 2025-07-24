@@ -7,6 +7,8 @@ const Question_answer = () => {
     return (
         <section className={styles.question_answer} id="question_answer">
             <h2 className={styles.title}>Вопросы-ответы</h2>
+            <Image className={styles.buggy} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/buggy.png`} alt="" width={843} height={596} />
+            <Image className={styles.spring} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/spring.png`} alt="" width={943} height={596} />
             <div className={styles.question_answer__content}>
                 <div className={styles.accordions}>
                     <details className={styles.accordion}>

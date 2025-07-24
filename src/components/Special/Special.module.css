@@ -1,4 +1,5 @@
 .special {
+    position: relative;
     padding: 64px 72px;
 }
 
@@ -61,4 +62,20 @@
     position: absolute;
     bottom: -75px;
     right: 0;
+}
+
+.buggy, .details {
+    position: absolute;
+    z-index: -1;
+    opacity: 20%;
+}
+
+.buggy {
+    top: -120px;
+    left: -260px;
+}
+
+.details {
+    bottom: -210px;
+    right: -260px;
 }

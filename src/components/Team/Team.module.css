@@ -1,4 +1,5 @@
 .team {
+    position: relative;
     padding: 64px 72px;
 }
 
@@ -12,12 +13,14 @@
 .team__content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(303px, 1fr));
+    justify-items: center;
     gap: 24px;
 }
 
 .team__item {
     border-radius: 10px;
     width: fit-content;
+    background-color: #F4F4F4;
 }
 
 .team__item__text {
@@ -33,4 +36,20 @@
 .team__item__text p {
     color: #121214;
     font-size: 18px;
+}
+
+.canister, .bumper {
+    position: absolute;
+    opacity: 20%;
+    z-index: -1;
+}
+
+.canister {
+    bottom: -120px;
+    left: -280px;
+}
+
+.bumper {
+    top: -120px;
+    right: -280px;
 }

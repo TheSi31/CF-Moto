@@ -1,0 +1,60 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.route {
+    margin-top: 40px;
+}
+
+.description, .cost {
+    padding: 0px 104px;
+}
+
+.cost {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.cost h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cost_trip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    gap: 28px;
+}
+
+.cost_trip__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color:#F4F4F4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cost_trip__item__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+}
+
+.cost_trip__item__text__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.cost_trip__item__text__price {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #037E8C;
+}

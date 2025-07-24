@@ -6,6 +6,8 @@ const Special = () => {
     return (
         <section className={styles.special} id='special'>
             <h2 className={styles.title}>Спецпредложения</h2>
+            <Image className={styles.buggy} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/buggy.png`} alt='' width={843} height={596} />
+            <Image className={styles.details} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/details.png`} alt='' width={943} height={596} />
             <div className={styles.special__content}> 
                 <div className={styles.special__content__item}>
                     <Image className={styles.special__content__item__img} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/special/1.png`} alt="день рождения" width={300} height={300} />

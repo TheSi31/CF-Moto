@@ -5,6 +5,8 @@ const Team = () => {
     return (
         <section className={styles.team} id='team'>
             <h2 className={styles.title}>Наша команда</h2>
+            <Image className={styles.canister} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/canister.png`} alt='' width={843} height={596} />
+            <Image className={styles.bumper} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/bumper.png`} alt='' width={943} height={596} />
             <div className={styles.team__content}>
                 <div className={styles.team__item}>
                     <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/team/1.png`} alt='Юлиана' width={303} height={303} />

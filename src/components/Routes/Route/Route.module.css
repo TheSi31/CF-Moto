@@ -1,13 +1,6 @@
 .route {
     display: flex;
     gap: 20px;
-    padding: 12px 0px 0px 72px;
-}
-
-.route__rtl {
-    display: flex;
-    gap: 20px;
-    padding: 12px 72px 0px 0px;
 }
 
 .rtl {

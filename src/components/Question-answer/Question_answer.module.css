@@ -1,4 +1,5 @@
 .question_answer {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 48px;
@@ -27,8 +28,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid #037E8C;
-    border-radius: 2px;
+    border: 1px solid #848484;
+    border-radius: 4px;
     padding: 16px;
 }
 
@@ -79,4 +80,20 @@
     text-align: center;
     font-weight: 400;
     font-size: 14px;
+}
+
+.buggy, .spring {
+    position: absolute;
+    opacity: 20%;
+    z-index: -1;
+}
+
+.buggy {
+    top: -120px;
+    right: -450px;
+}
+
+.spring {
+    bottom: -250px;
+    left: -350px;
 }
