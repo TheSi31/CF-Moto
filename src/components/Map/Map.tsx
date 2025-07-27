@@ -9,9 +9,9 @@ export default function Map() {
   useEffect(() => {
     delete (L.Icon.Default.prototype as any)._getIconUrl;
     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: '/leaflet/marker-icon-2x.png',
-      iconUrl: '/leaflet/marker-icon.png',
-      shadowUrl: '/leaflet/marker-shadow.png',
+      iconRetinaUrl: `${process.env.NEXT_PUBLIC_BASE_PATH}/leaflet/marker-icon-2x.png`,
+      iconUrl: `${process.env.NEXT_PUBLIC_BASE_PATH}/leaflet/marker-icon.png`,
+      shadowUrl: `${process.env.NEXT_PUBLIC_BASE_PATH}/leaflet/marker-shadow.png`,
     });
   }, []);
 

@@ -12,6 +12,8 @@ const Slider = ({ rtl }: { rtl?: boolean }) => {
 
     return (
         <Swiper
+            observer={true}
+            observeParents={true}
             dir={rtl ? 'rtl' : 'ltr'}
             slidesPerView="auto"
             spaceBetween={20}
