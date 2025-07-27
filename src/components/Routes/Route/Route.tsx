@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ModalRoute from "@/components/Modal/ModalRoute/ModalRoute";
 import RouteContent from "./RouteContent/RouteContent";
-import { RouteProps } from "@/types/Route";
+import type { RouteProps } from "@/types/Route";
 
 const Route = (props: RouteProps) => {
   const [active, setActive] = useState(false);

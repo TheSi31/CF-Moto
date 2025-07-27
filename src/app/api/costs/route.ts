@@ -2,8 +2,8 @@ export const revalidate = 60; //тут можно установить как ч
 
 import { NextResponse } from 'next/server';
 
-import { routeData } from '../DB';
+import { costs } from '../DB';
 
 export async function GET() {
-    return NextResponse.json(routeData);
+    return NextResponse.json(costs);
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../Route.module.css";
 import Slider from "../../Slider/Slider";
 import Button from "@/components/UI/Button/Button";
-import { RouteProps } from "@/types/Route";
+import type { RouteProps } from "@/types/Route";
 
 type Props = RouteProps & {
   onDetailsClick?: () => void;
