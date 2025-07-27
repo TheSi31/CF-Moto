@@ -15,7 +15,7 @@ const Slider = ({ rtl }: { rtl?: boolean }) => {
             observer={true}
             observeParents={true}
             dir={rtl ? 'rtl' : 'ltr'}
-            slidesPerView="auto"
+            slidesPerView={2.2}
             spaceBetween={20}
             slidesOffsetAfter={50}
             pagination={
