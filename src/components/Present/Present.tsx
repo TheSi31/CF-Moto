@@ -2,7 +2,6 @@ import Image from "next/image";
 import Button from "../UI/Button/Button";
 import styles from "./Present.module.css";
 
-
 const Present = () => {
     return (
         <section className={styles.present} style={{backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_PATH}/present_background.png")`}}>

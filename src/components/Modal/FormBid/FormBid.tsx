@@ -1,20 +1,11 @@
 import Button from "@/components/UI/Button/Button";
 import styles from "./FormBid.module.css";
-import { useEffect, useState } from "react";
-import { DateType } from "@/types/Date";
+import { useDates } from "@/hooks/useDates";
+
 
 const FormBid = () => {
 
-    const [date, setDate] = useState<DateType>();
-
-    useEffect(() => {
-        const fecthData = async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/dates`);
-            const data = await res.json();
-            setDate(data);
-        }
-        fecthData();
-    }, []);
+    const { dates } = useDates();
 
     return (
         <div className={styles.formBid} style={{backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_PATH}/form_background.png")`}}>
@@ -24,7 +15,7 @@ const FormBid = () => {
                     <label htmlFor="date">Желаемая дата</label>
                     <div className={styles.select_wrapper}>
                         <select>
-                            {date && Array.isArray(date) && date.map((item, index) => (
+                            {dates.map((item, index) => (
                                 <option key={index}>{item.date}</option>
                             ))}
                         </select>

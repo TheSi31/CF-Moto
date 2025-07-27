@@ -6,6 +6,7 @@ import RouteContent from "./RouteContent/RouteContent";
 import type { RouteProps } from "@/types/Route";
 
 const Route = (props: RouteProps) => {
+
   const [active, setActive] = useState(false);
 
   return (

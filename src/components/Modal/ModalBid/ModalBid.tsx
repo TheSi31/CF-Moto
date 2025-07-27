@@ -5,21 +5,11 @@ import Button from '@/components/UI/Button/Button';
 
 import styles from './ModalBid.module.css';
 
-type FormProps = {
-    name: string,
-    phone: string
-}
-
-type ModalProps = {
-    active: boolean, 
-    setActive: (active: boolean) => void
-};
+import type { ModalProps, FormProps } from "@/types/Bid"
 
 const ModalBid = ({active, setActive} : ModalProps) => {
 
     const {register, handleSubmit, formState: {errors}} = useForm<FormProps>();
-
-    
 
     return (
         <Modal active={active} setActive={setActive}>

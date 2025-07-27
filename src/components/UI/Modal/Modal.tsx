@@ -2,12 +2,7 @@ import { useScrollLock } from '@/hooks/useScrollLock';
 
 import styles from './Modal.module.css';
 
-type ModalProps = {
-    active: boolean;
-    setActive: (active: boolean) => void;
-    className?: string;
-    children?: React.ReactNode;
-}
+import type { ModalProps } from '@/types/Modal';
 
 const Modal = ({active, setActive, className, children}: ModalProps) => {
 

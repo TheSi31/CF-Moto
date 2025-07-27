@@ -1,30 +1,23 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useCosts } from "@/hooks/useCosts";
 import Image from "next/image";
 
 import styles from "./Cost.module.css";
-import type { Cost } from "@/types/Cost";
 import ModalCost from "../Modal/ModalCost/ModalCost";
 
 const Cost = () => {
 
-    const [content, setContent] = useState<Cost[]>([]);
+    const { costs, loading, error } = useCosts();
 
-    useEffect(() => {
-        const fetchRoutes = async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/costs`);
-            const data = await res.json();
-            setContent(data);
-        };
-        fetchRoutes();
-    }, []);
+    if (loading) return <p>Загружаем стоимость…</p>;
+    if (error) return <p>Ошибка загрузки стоимости</p>;
 
     return (
         <div className={styles.cost}>
             <h4>Стоимость за 1 квадрацикл:</h4>
             <div className={styles.cost_trip}>
-                {content.map((item, index) => (
+                {costs.map((item, index) => (
                     <div className={styles.cost_trip__item} key={index}>
                         <ModalCost />
                         <Image src={item.img} alt={item.title} width={310} height={310} />

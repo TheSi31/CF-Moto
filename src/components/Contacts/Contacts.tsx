@@ -44,10 +44,10 @@ const Contacts = () => {
                 <div className={styles.contacts__social}>
                     <h3 className={styles.contacts__social__title}>Написать нам:</h3>
                     <nav className={styles.contacts__social__nav}>
-                        <a>
+                        <a href="#">
                             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/icon/whatsapp.svg`} alt="" width={41} height={41} />
                         </a>
-                        <a>
+                        <a href="#">
                             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/icon/instagram.svg`} alt="" width={41} height={41} />
                         </a>
                     </nav>

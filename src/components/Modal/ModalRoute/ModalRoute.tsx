@@ -9,14 +9,6 @@ import Cost from "@/components/Cost/Cost";
 
 const ModalRoute = ( {route, active, setActive} : ModalRouteProps) => {
 
-    const imagesArray = [
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/1.png`,
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/2.png`,
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/3.png`,
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/4.png`,
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/modal/5.png`
-    ]
-
     return (
         <Modal className={styles.modal} active={active} setActive={setActive}>
             <RouteContent className={styles.route} {...route} />
