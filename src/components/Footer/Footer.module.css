@@ -18,9 +18,11 @@
 .menu {
     display: flex;
     gap: 80px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.link:hover {
+.menu a:hover {
     color: #037E8C;
     transition: color 0.3s;
 }

@@ -17,9 +17,9 @@
 
 .services__content__item {
     border-radius: 10px;
-    width: fit-content;
     background-color: #F4F4F4;
     min-height: 309px;
+    width: 309px;
 }
 
 .services__content__item p {
@@ -27,4 +27,9 @@
     font-weight: 600;
     color: #037E8C;
     padding: 24px;
+}
+
+.services__content__item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }

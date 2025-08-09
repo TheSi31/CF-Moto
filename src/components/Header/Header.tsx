@@ -14,12 +14,13 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Logo.png`} alt="logo" width={111} height={143} unoptimized />
+            <Image className={styles.logo} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/Logo.png`} alt="logo" width={111} height={143} unoptimized />
             <nav className={styles.menu}> 
-                <Link href="#routes">МАРШРУТЫ</Link>
-                <Link href="#photo">ГАЛЕРЕЯ</Link>
-                <Link href="#question_answer">ВОПРОС-ОТВЕТ</Link>
-                <Link href="#contacts">КОНТАКТЫ</Link>
+                <Link href="#routes">Машруты</Link>
+                <Link href="#photo">Галерея</Link>
+                <Link href="#question_answer">Вопрос-ответ</Link>
+                <Link href="#contacts">Контакты</Link>
+                <Link href="#" onClick={() => setActive(true)}>ЗАБРОНИРОВАТЬ</Link>
             </nav>
             <div className={styles.contacts}>
                 <p className={styles.number}><span style={{position: 'absolute', left: '-24px', top: '2px', content: `url(${process.env.NEXT_PUBLIC_BASE_PATH}/icon/phone.svg)`}}></span>+7 928 333 26 45</p>

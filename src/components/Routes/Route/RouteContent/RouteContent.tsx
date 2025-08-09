@@ -35,12 +35,16 @@ const RouteContent = ({className, title, price, time, distance, level, route, im
           <h4>Маршрут</h4>
           <p>{route}</p>
         </div>
-        {onDetailsClick && (
-          <nav className={styles.route__buttons}>
-            <Button text="Подробнее" outline onClick={onDetailsClick} />
-            <Button text="Забронировать" />
-          </nav>
-        )}
+        <nav className={styles.route__buttons}>
+          {onDetailsClick ? (
+            <>
+              <Button text="Подробнее" outline onClick={onDetailsClick} />
+              <Button text="Забронировать" />
+            </>
+          ) : (
+            <Button text="Схема маршрута" outline />
+          )}
+        </nav>
       </div>
       <Slider rtl={rtl} />
     </div>

@@ -15,6 +15,18 @@
     margin-top: 24px;
 }
 
+.menu a {
+    font-size: 14px;
+    font-weight: 600;
+    height: fit-content;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #037E8C;
+    transition: color 0.3s;
+}
+
 .contacts {
     position: relative;
     margin-top: 24px;
