@@ -17,7 +17,7 @@ const Cost = () => {
         <div className={styles.cost}>
             <h4>Стоимость за 1 квадрацикл:</h4>
             <div className={styles.cost_trip}>
-                {costs.map((item, index) => (
+                {costs.map((item : any, index : number) => (
                     <div className={styles.cost_trip__item} key={index}>
                         <ModalCost />
                         <Image src={item.img} alt={item.title} width={310} height={310} />

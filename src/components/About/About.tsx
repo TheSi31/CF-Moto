@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,6 +12,30 @@ import styles from "./About.module.css";
 import 'swiper/css';
 
 const About = () => {
+    const [direction, setDirection] = useState<'vertical' | 'horizontal'>('horizontal');
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDirection(window.innerWidth >= 1024 ? 'vertical' : 'horizontal');
+        };
+
+        const debouncedHandleResize = debounce(handleResize, 200);
+
+        window.addEventListener('resize', debouncedHandleResize);
+
+        return () => {
+            window.removeEventListener('resize', debouncedHandleResize);
+        };
+    }, []);
+
+    const debounce = (func: Function, delay: number) => {
+        let timeoutId: NodeJS.Timeout;
+
+        return (...args: any[]) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(null, args), delay);
+        };
+    };
 
     const pagination = {
         clickable: true,
@@ -23,7 +49,8 @@ const About = () => {
         <section className={styles.about}>
             <div className={styles.pagination +" about-swiper-pagination"} />
             <Swiper
-                direction={'vertical'}
+                key={direction}
+                direction={direction}
                 pagination={pagination}
                 loop
                 onActiveIndexChange={(swiper) => {

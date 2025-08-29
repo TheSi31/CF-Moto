@@ -79,3 +79,13 @@
     bottom: -210px;
     right: -260px;
 }
+
+@media screen and (max-width: 768px) {
+    .special {
+        padding: 32px 12px;
+    }
+
+    .special__content__item {
+        flex-direction: column;
+    }
+}

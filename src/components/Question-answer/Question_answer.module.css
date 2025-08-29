@@ -97,3 +97,27 @@
     bottom: -250px;
     left: -350px;
 }
+
+@media screen and (max-width: 1300px) {
+    .question_answer {
+        padding: 64px 72px;
+    }
+    
+    .question_answer__content {
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .question_answer__content {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .question_answer {
+        padding: 64px 12px;
+    }
+    
+}

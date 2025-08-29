@@ -39,3 +39,16 @@
     width: fit-content !important;
     padding: 14px 22px !important;
 }
+
+@media screen and (max-width: 1224px) { 
+    .present__content {
+        flex-direction:column-reverse;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .present {
+        padding: 32px 12px;
+    }
+}

@@ -37,6 +37,7 @@
     letter-spacing: 2px;
     color: #121214;
     padding-bottom: 2px;
+    user-select: none;
 }
 
 .active {

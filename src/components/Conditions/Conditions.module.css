@@ -1,5 +1,7 @@
 .conditions {
     padding: 64px 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title {
@@ -30,4 +32,36 @@
 
 .conditions__content__item p {
     line-height: 150%;
+}
+
+@media screen and (max-width: 1300px) {
+    .conditions {
+        padding: 32px 12px;
+    }
+    
+    .conditions__content {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .conditions__content {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .conditions__content__item{
+        background-color: white;
+        border: none;
+        gap: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .conditions__content__item{
+        width: auto;
+        height: auto;
+    }
 }

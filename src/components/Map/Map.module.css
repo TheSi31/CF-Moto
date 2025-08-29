@@ -1,0 +1,11 @@
+.map {
+    height: 500px;
+    min-width: 700px;
+}
+
+@media screen and (max-width: 1300px) {
+    .map {
+        height: 400px;
+        width: auto;
+    }
+}

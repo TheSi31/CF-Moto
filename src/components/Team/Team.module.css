@@ -12,7 +12,7 @@
 
 .team__content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(303px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     gap: 24px;
 }
@@ -52,4 +52,39 @@
 .bumper {
     top: -120px;
     right: -280px;
+}
+
+@media screen and (max-width: 1300px) {
+    .team {
+        padding: 32px 12px;
+    }
+
+    .team__content {
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team__item {
+        min-height: 230px;
+        min-width: 160px;
+    }
+
+    .team__item__img {
+        width: 100% !important;
+        height: 160px !important;
+    }
+    
+    .team__item__text {
+        padding: 10px 0px 10px;
+    }
+    
+    .team__item__text h3 {
+        font-size: 18px;
+    }
+    
+    .team__item__text p {
+        font-size: 14px;
+    }
 }

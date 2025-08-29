@@ -15,7 +15,7 @@ const FormBid = () => {
                     <label htmlFor="date">Желаемая дата</label>
                     <div className={styles.select_wrapper}>
                         <select>
-                            {dates.map((item, index) => (
+                            {dates.map((item : any, index : number) => (
                                 <option key={index}>{item.date}</option>
                             ))}
                         </select>

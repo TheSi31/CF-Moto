@@ -5,8 +5,23 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 12px 72px;
-    z-index: 2;
+    z-index: 3;
     color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(18, 18, 20, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.header.scrolled .logo {
+    height: 100px !important;
+    width: auto !important;
 }
 
 .menu {
@@ -47,4 +62,49 @@
     font-weight: 600;
     margin-top: 12px;
     cursor: pointer;
+}
+
+.logo {
+    transition: all 0.3s;
+    height: 143px !important;
+    width: auto !important;
+}
+
+body:has(.header:fixed) .header {
+    background-color: rgba(18, 18, 20, 0.9);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .header {
+        position: fixed;
+        padding: 12px 32px;
+        align-items: center;
+    }
+
+    .logo {
+        height: 124px !important;
+        width: 90px !important
+    }
+
+    .menu, .contacts {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 12px 20px;
+    }
+    
+    .logo {
+        height: 64px !important;
+        width: 50px !important;
+    }
+
+    .header.scrolled .logo {
+        height: 64px !important;
+        width: 50px !important;
+    }
 }

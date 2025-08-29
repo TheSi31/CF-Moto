@@ -1,27 +1,21 @@
-import { useState, useEffect } from 'react';
-import type { Cost } from '@/types/Cost';
+import useSWR from 'swr';
+import type { CostType } from '@/types/Cost';
 
 export const useCosts = () => {
-    const [costs, setCosts] = useState<Cost[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const { data, error, isLoading } = useSWR<CostType[]>(
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/api/costs`,
+        fetcher
+    );
 
-    useEffect(() => {
-        const fetchCosts = async () => {
-        try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/costs`);
-            if (!res.ok) throw new Error('Ошибка загрузки');
-            const data = await res.json();
-            setCosts(data);
-        } catch (err: any) {
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
-        };
+    return {
+        costs: data ?? [],
+        loading: isLoading,
+        error: error?.message ?? null,
+    };
+};
 
-        fetchCosts();
-    }, []);
-
-    return { costs, loading, error };
+const fetcher = async (url: string) => {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Ошибка загрузки');
+    return res.json();
 };

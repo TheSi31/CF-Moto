@@ -12,6 +12,8 @@ CSS Modules — чистая и изолированная стилизация 
 
 React-hook-form — управление формами 
 
+SWR — глобальный кэш для запросов, позволяет ускорять загрузку страниц
+
 Figma — Code — верстка реализована по дизайн-макету из Figma P.S. адаптировал как считал нужным
 https://www.figma.com/design/LR0DuMxUqB326FD3QyWgJb/Landing-page---Экскурсии-на-квадроциклах?node-id=30-2398&t=KW1sjmZoMUzkPorf-0
 

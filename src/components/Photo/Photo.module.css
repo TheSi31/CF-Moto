@@ -9,6 +9,13 @@
     margin-bottom: 44px;
 }
 
+.image {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 250px !important;
+    min-height: 250px !important;
+}
+
 .pagination {
     position: relative;
     display: flex;
@@ -37,6 +44,7 @@
     letter-spacing: 2px;
     color: #121214;
     padding-bottom: 2px;
+    user-select: none;
 }
 
 .active {

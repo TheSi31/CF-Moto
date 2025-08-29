@@ -56,3 +56,10 @@
     display: flex;
     gap: 16px;
 }
+
+@media screen and (max-width: 1300px) {
+    .contacts {
+        flex-direction: column-reverse;
+    }
+    
+}

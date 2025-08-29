@@ -1,0 +1,87 @@
+.burger_menu_wrapper {
+    display: none;
+}
+
+.burger_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.burger_menu__line {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 18, 20, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.menu_content a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.menu_content a:hover {
+    color: #ccc;
+}
+
+.close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.close > *:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.close > *:nth-child(2) {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1300px) {
+    .burger_menu_wrapper {
+        display: block;
+    }
+}

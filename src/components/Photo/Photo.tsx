@@ -22,9 +22,8 @@ const Photo = () => {
             <h2 className={styles.title}>Фото</h2>
             <Swiper
                 slidesPerView={3}
-                centeredSlides={true}   
-                slidesOffsetBefore={50}
-                slidesOffsetAfter={50}
+                centeredSlides={true}    
+                spaceBetween={20}
                 loop
                 pagination={pagination}
                 modules={[Pagination]}

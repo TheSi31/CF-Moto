@@ -1,12 +1,12 @@
 .video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: brightness(0.3) grayscale(100%);
-    -webkit-backdrop-filter: brightness(0.3) grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: brightness(0.3) grayscale(100%);
+  -webkit-backdrop-filter: brightness(0.3) grayscale(100%);
 }
 
 .video::before {
@@ -20,12 +20,12 @@
 }
 
 .video__player {
-    width: 50vw;
-    height: 50vh;
-    border: 7px solid #ffffff;
-    background-color: black;
-    border-radius: 24px;
-    z-index: 1;
+  width: 50vw;
+  height: 50vh;
+  border: 7px solid #ffffff;
+  background-color: black;
+  border-radius: 24px;
+  z-index: 1;
 }
 
 .play__button {
@@ -43,4 +43,10 @@
 
 .play__button:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .video__player {
+    width: 80vw;
+  }
 }
