@@ -56,12 +56,7 @@
         border: none;
         gap: 8px;
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .conditions__content__item{
-        width: auto;
+        width: 100%;
         height: auto;
     }
 }

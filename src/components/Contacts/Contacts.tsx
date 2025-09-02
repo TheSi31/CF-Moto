@@ -13,6 +13,7 @@ const Map = dynamic(() => import('@/components/Map/Map'), {
 const Contacts = () => {
     return (
         <section className={styles.contacts} id="contacts">
+            <h2 className={styles.title_mobile}>Контакты</h2>
             <div className={styles.contacts__content}>
                 <h2 className={styles.title}>Контакты</h2>
                 <div className={styles.contacts__content__info}>

@@ -10,7 +10,6 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-
 export const metadata: Metadata = {
   title: "CF Moto",
   description: "CF Moto - экскурсии по Кубане",

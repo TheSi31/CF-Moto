@@ -6,6 +6,7 @@ import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
 import styles from './Photo.module.css';
+import './Swiper.css';
 
 const Photo = () => {
 
@@ -27,6 +28,7 @@ const Photo = () => {
                 loop
                 pagination={pagination}
                 modules={[Pagination]}
+                id='photo__slider'
                 className={styles.photo__slider}
                 onActiveIndexChange={(swiper) => {
                     const bullets = document.querySelectorAll(`.${styles.paginationBullet}`);
